@@ -21,7 +21,7 @@ const SingleProduct = ({ product }) => {
       <div id="product_details">
         <div className="main_container">
           <div className="row mt-2">
-            {product? (
+            {product ? (
               <ProductInfo product={product} />
             ) : (
               <div className="col-md-9 col-sm-12 mt-5">
@@ -36,10 +36,10 @@ const SingleProduct = ({ product }) => {
 };
 
 SingleProduct.getInitialProps = async (ctx) => {
-  
+
   try {
     const res = await axiosInstance.get(`/product/details/${ctx.query?.slug}`);
-    // console.log('API response:', res.data); 
+    console.log('API response:', res.data);
 
     console.log(res);
 
@@ -47,6 +47,7 @@ SingleProduct.getInitialProps = async (ctx) => {
       product: res.data?.product,
     };
   } catch (error) {
+    console.error('Error fetching product data:', error);
     return {
       redirect: {
         destination: "/",

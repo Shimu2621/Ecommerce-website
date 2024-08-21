@@ -5,12 +5,6 @@
       "static/chunks/src_components_shared_Header_UserMenu_jsx.js"
     ]
   },
-  "index.js -> @/components/home/FeaturedProduct": {
-    "id": "index.js -> @/components/home/FeaturedProduct",
-    "files": [
-      "static/chunks/src_components_home_FeaturedProduct_jsx.js"
-    ]
-  },
   "product\\[slug].js -> @/components/product/ProductInfo": {
     "id": "product\\[slug].js -> @/components/product/ProductInfo",
     "files": [
